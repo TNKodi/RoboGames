@@ -4,12 +4,13 @@ EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/project
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/floors/protos/RectangleArena.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/apartment_structure/protos/Wall.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/Roughcast.proto"
 
 WorldInfo {
 }
 Viewpoint {
-  orientation -0.5349421706391949 0.5074434864081239 0.6755279284928158 2.011818237738503
-  position -0.29196558455295407 0.36314397102471435 1.4457959336497934
+  orientation 0.5194817801517065 -0.513627961105492 -0.6828799291683928 4.230190173434948
+  position 0.37149505348398415 -0.9348641008984492 1.60586887539216
   follow "wall(5)"
 }
 TexturedBackground {
@@ -25,6 +26,66 @@ Wall {
   rotation 0 1 0 4.6928e-06
   name "wall(7)"
   size 0.25 0.01 0.1
+}
+Wall {
+  translation -1.04093 -0.451583 3.23813e-06
+  rotation 9.589706626575503e-09 -0.9999916482273697 0.004086988562297277 -5.307179586466759e-06
+  name "Green Colour"
+  size 0.1 0.01 0.1
+  appearance Roughcast {
+    colorOverride 0 1 0
+    textureTransform TextureTransform {
+      scale 2.4 1
+    }
+  }
+}
+Wall {
+  translation 0.783126 0.533074 3.23813e-06
+  rotation 9.589706626575503e-09 -0.9999916482273697 0.004086988562297277 -5.307179586466759e-06
+  name "Red Wall"
+  size 0.1 0.01 0.1
+  appearance Roughcast {
+    colorOverride 1 0 0
+    textureTransform TextureTransform {
+      scale 2.4 1
+    }
+  }
+}
+Wall {
+  translation 1.03647 -0.197295 3.23813e-06
+  rotation 9.589706626575503e-09 -0.9999916482273697 0.004086988562297277 -5.307179586466759e-06
+  name "brown wall"
+  size 0.1 0.01 0.1
+  appearance Roughcast {
+    colorOverride 0.647059 0.411765 0.117647
+    textureTransform TextureTransform {
+      scale 2.4 1
+    }
+  }
+}
+Wall {
+  translation 0.139134 -1.20811 3.23813e-06
+  rotation 9.589706626575503e-09 -0.9999916482273697 0.004086988562297277 -5.307179586466759e-06
+  name "yellow wall"
+  size 0.1 0.01 0.1
+  appearance Roughcast {
+    colorOverride 1 1 0
+    textureTransform TextureTransform {
+      scale 2.4 1
+    }
+  }
+}
+Wall {
+  translation 0.642453 -0.453282 3.23813e-06
+  rotation -9.589706626575503e-09 0.9999916482273697 -0.004086988562297277 5.30716e-06
+  name "pink wall"
+  size 0.1 0.01 0.1
+  appearance Roughcast {
+    colorOverride 1 0 1
+    textureTransform TextureTransform {
+      scale 2.4 1
+    }
+  }
 }
 Wall {
   translation 0.079538 0.54084 3.23813e-06
