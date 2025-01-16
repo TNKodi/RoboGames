@@ -1,0 +1,407 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/apartment_structure/protos/Wall.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/Roughcast.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/robots/gctronic/e-puck/protos/E-puck.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation -0.5924053517517436 0.5865106100450752 0.5523234591436859 2.140788849197441
+  position 0.21842520152009243 0.44614047085846564 2.8485585626880856
+  follow "wall(5)"
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  translation 0.0845822 0.0388599 -8.88179e-15
+  floorSize 2.5 2.5
+}
+Wall {
+  translation -1.04 -0.96 3.23813e-06
+  rotation 0 1 0 4.6928e-06
+  name "wall(7)"
+  size 0.25 0.01 0.1
+}
+Wall {
+  translation -1.04093 -0.451583 3.23813e-06
+  rotation 9.589706626575503e-09 -0.9999916482273697 0.004086988562297277 -5.307179586466759e-06
+  name "Green Colour"
+  size 0.1 0.01 0.1
+  appearance Roughcast {
+    colorOverride 0 1 0
+    textureTransform TextureTransform {
+      scale 2.4 1
+    }
+  }
+}
+Wall {
+  translation 0.783126 0.533074 3.23813e-06
+  rotation 9.589706626575503e-09 -0.9999916482273697 0.004086988562297277 -5.307179586466759e-06
+  name "Red Wall"
+  size 0.1 0.01 0.1
+  appearance Roughcast {
+    colorOverride 1 0 0
+    textureTransform TextureTransform {
+      scale 2.4 1
+    }
+  }
+}
+Wall {
+  translation 1.03647 -0.197295 3.23813e-06
+  rotation 9.589706626575503e-09 -0.9999916482273697 0.004086988562297277 -5.307179586466759e-06
+  name "brown wall"
+  size 0.1 0.01 0.1
+  appearance Roughcast {
+    colorOverride 0.647059 0.411765 0.117647
+    textureTransform TextureTransform {
+      scale 2.4 1
+    }
+  }
+}
+Wall {
+  translation 0.139134 -1.20811 3.23813e-06
+  rotation 9.589706626575503e-09 -0.9999916482273697 0.004086988562297277 -5.307179586466759e-06
+  name "yellow wall"
+  size 0.1 0.01 0.1
+  appearance Roughcast {
+    colorOverride 1 1 0
+    textureTransform TextureTransform {
+      scale 2.4 1
+    }
+  }
+}
+Wall {
+  translation 0.642453 -0.453282 3.23813e-06
+  rotation -9.589706626575503e-09 0.9999916482273697 -0.004086988562297277 5.30716e-06
+  name "pink wall"
+  size 0.1 0.01 0.1
+  appearance Roughcast {
+    colorOverride 1 0 1
+    textureTransform TextureTransform {
+      scale 2.4 1
+    }
+  }
+}
+Wall {
+  translation 0.079538 0.54084 3.23813e-06
+  rotation 2.3463999999870816e-06 -2.3463999999870816e-06 0.9999999999944944 -1.5707953071795862
+  name "wall(46)"
+  size 0.5 0.01 0.1
+}
+Wall {
+  translation -0.165475 1.0354 3.23813e-06
+  rotation -2.3432799653135986e-09 0.9774069855319333 0.21136599687125485 4.80123e-06
+  name "wall(52)"
+  size 1 0.01 0.1
+}
+Wall {
+  translation 0.337669 -0.710605 3.23813e-06
+  rotation 2.3463999999870816e-06 -2.3463999999870816e-06 0.9999999999944944 -1.5707953071795862
+  name "wall(53)"
+  size 1 0.01 0.1
+}
+Wall {
+  translation 0.586738 -0.208418 3.23813e-06
+  rotation 2.3463999999870816e-06 -2.3463999999870816e-06 0.9999999999944944 -1.5707953071795862
+  name "wall(55)"
+  size 0.5 0.01 0.1
+}
+Wall {
+  translation -0.414901 0.284684 3.23813e-06
+  rotation -2.3463999999870816e-06 2.3463999999870816e-06 -0.9999999999944944 1.5708
+  name "wall(57)"
+  size 1 0.01 0.1
+}
+Wall {
+  translation 0.085279 -0.963043 3.23813e-06
+  rotation 2.3463999999870816e-06 -2.3463999999870816e-06 0.9999999999944944 -1.5707953071795862
+  name "wall(58)"
+  size 0.5 0.01 0.1
+}
+Wall {
+  translation 1.08928 0.0375005 3.23813e-06
+  rotation 2.3463999999870816e-06 -2.3463999999870816e-06 0.9999999999944944 -1.5707953071795862
+  name "wall(59)"
+  size 0.5 0.01 0.1
+}
+Wall {
+  translation -0.660997 -0.461883 3.23813e-06
+  rotation 2.3463999999870816e-06 -2.3463999999870816e-06 0.9999999999944944 -1.5707953071795862
+  name "wall(60)"
+  size 1 0.01 0.1
+}
+Wall {
+  translation 0.58871 -0.709054 3.23813e-06
+  rotation 0 1 0 4.6928e-06
+  name "wall(30)"
+  size 0.5 0.01 0.1
+}
+Wall {
+  translation -0.661151 0.785428 3.23813e-06
+  rotation 2.3463999999870816e-06 -2.3463999999870816e-06 0.9999999999944944 -1.5707953071795862
+  name "wall(33)"
+  size 0.5 0.01 0.1
+}
+Wall {
+  translation -0.415894 -0.711142 3.23813e-06
+  rotation 0 1 0 4.6928e-06
+  name "wall(37)"
+  size 1 0.01 0.1
+}
+Wall {
+  translation 0.334661 -0.206679 3.23813e-06
+  rotation 0 1 0 4.6928e-06
+  name "wall(41)"
+  size 0.5 0.01 0.1
+}
+Wall {
+  translation 0.0817426 0.0394429 3.23813e-06
+  rotation 0 1 0 4.6928e-06
+  name "wall(43)"
+  size 0.5 0.01 0.1
+}
+Wall {
+  translation 0.208606 0.541079 1.54869e-06
+  rotation 0 1 0 4.6928e-06
+  name "wall(44)"
+  size 1.25 0.01 0.1
+}
+Wall {
+  translation 1.08779 -0.205525 3.23813e-06
+  rotation 0 1 0 4.6928e-06
+  name "wall(45)"
+  size 0.5 0.01 0.1
+}
+Wall {
+  translation 1.20833 0.793751 3.23813e-06
+  rotation 0 1 0 4.6928e-06
+  name "wall(3)"
+  size 0.25 0.01 0.1
+}
+Wall {
+  translation -0.165389 -0.0861352 3.23813e-06
+  rotation 2.3463999999870816e-06 -2.3463999999870816e-06 0.9999999999944944 -1.5707953071795862
+  name "wall(8)"
+  size 0.75 0.01 0.1
+}
+Wall {
+  translation -0.0419145 -0.45844 3.23813e-06
+  rotation 0 1 0 4.6928e-06
+  name "wall(9)"
+  size 0.75 0.01 0.1
+}
+Wall {
+  translation 0.831974 -0.458364 3.23813e-06
+  rotation 0 1 0 4.6928e-06
+  name "wall(10)"
+  size 0.5 0.01 0.1
+}
+Wall {
+  translation 0.4496 0.297561 3.23813e-06
+  rotation 0 1 0 4.6928e-06
+  name "wall(12)"
+  size 0.25 0.01 0.1
+}
+Wall {
+  translation -0.5335 -0.213375 3.23813e-06
+  rotation 0 1 0 4.6928e-06
+  name "wall(20)"
+  size 0.25 0.01 0.1
+}
+Wall {
+  translation 0.955841 1.0394 3.23813e-06
+  rotation 1.2326300070549486e-07 0.754667004319331 0.6561080037552293 6.21834e-06
+  name "wall(21)"
+  size 0.25 0.01 0.1
+}
+Wall {
+  translation 0.207354 0.789112 3.23813e-06
+  rotation 0 1 0 4.6928e-06
+  name "wall(22)"
+  size 0.25 0.01 0.1
+}
+Wall {
+  translation 0.836642 0.542455 3.23813e-06
+  rotation 2.3463999999870816e-06 2.3463999999870816e-06 0.9999999999944944 1.5708
+  name "wall(23)"
+  size 1 0.01 0.1
+}
+Wall {
+  translation 1.20851 0.541936 3.23813e-06
+  rotation 0 1 0 4.6928e-06
+  name "wall(25)"
+  size 0.25 0.01 0.1
+}
+Wall {
+  translation -0.916594 1.16377 2.95655e-06
+  rotation 2.3463999999870816e-06 2.3463999999870816e-06 0.9999999999944944 1.5708
+  name "wall(6)"
+  size 0.25 0.01 0.1
+}
+Wall {
+  translation 0.587827 1.04184 2.95655e-06
+  rotation 2.3463999999870816e-06 2.3463999999870816e-06 0.9999999999944944 1.5708
+  name "wall(61)"
+  size 0.5 0.01 0.1
+}
+Wall {
+  translation -0.40543 -1.08495 2.95655e-06
+  rotation 2.3463999999870816e-06 2.3463999999870816e-06 0.9999999999944944 1.5708
+  name "wall(62)"
+  size 0.25 0.01 0.1
+}
+Wall {
+  translation -0.40543 -1.08495 2.95655e-06
+  rotation 2.3463999999870816e-06 2.3463999999870816e-06 0.9999999999944944 1.5708
+  name "wall(71)"
+  size 0.25 0.01 0.1
+}
+Wall {
+  translation -0.40543 -1.08495 2.95655e-06
+  rotation 2.3463999999870816e-06 2.3463999999870816e-06 0.9999999999944944 1.5708
+  name "wall(72)"
+  size 0.25 0.01 0.1
+}
+Wall {
+  translation -0.40543 -1.08495 2.95655e-06
+  rotation 2.3463999999870816e-06 2.3463999999870816e-06 0.9999999999944944 1.5708
+  name "wall(73)"
+  size 0.25 0.01 0.1
+}
+Wall {
+  translation -0.40543 -1.08495 2.95655e-06
+  rotation 2.3463999999870816e-06 2.3463999999870816e-06 0.9999999999944944 1.5708
+  name "wall(74)"
+  size 0.25 0.01 0.1
+}
+Wall {
+  translation -0.40543 -1.08495 2.95655e-06
+  rotation 2.3463999999870816e-06 2.3463999999870816e-06 0.9999999999944944 1.5708
+  name "wall(75)"
+  size 0.25 0.01 0.1
+}
+Wall {
+  translation -0.40543 -1.08495 2.95655e-06
+  rotation 2.3463999999870816e-06 2.3463999999870816e-06 0.9999999999944944 1.5708
+  name "wall(76)"
+  size 0.25 0.01 0.1
+}
+Wall {
+  translation -0.40543 -1.08495 2.95655e-06
+  rotation 2.3463999999870816e-06 2.3463999999870816e-06 0.9999999999944944 1.5708
+  name "wall(77)"
+  size 0.25 0.01 0.1
+}
+Wall {
+  translation -0.40543 -1.08495 2.95655e-06
+  rotation 2.3463999999870816e-06 2.3463999999870816e-06 0.9999999999944944 1.5708
+  name "wall(78)"
+  size 0.25 0.01 0.1
+}
+Wall {
+  translation -0.40543 -1.08495 2.95655e-06
+  rotation 2.3463999999870816e-06 2.3463999999870816e-06 0.9999999999944944 1.5708
+  name "wall(79)"
+  size 0.25 0.01 0.1
+}
+Wall {
+  translation -0.40543 -1.08495 2.95655e-06
+  rotation 2.3463999999870816e-06 2.3463999999870816e-06 0.9999999999944944 1.5708
+  name "wall(80)"
+  size 0.25 0.01 0.1
+}
+Wall {
+  translation -0.40543 -1.08495 2.95655e-06
+  rotation 2.3463999999870816e-06 2.3463999999870816e-06 0.9999999999944944 1.5708
+  name "wall(81)"
+  size 0.25 0.01 0.1
+}
+Wall {
+  translation -0.164049 -0.831393 2.95655e-06
+  rotation 2.3463999999870816e-06 2.3463999999870816e-06 0.9999999999944944 1.5708
+  name "wall(82)"
+  size 0.25 0.01 0.1
+}
+Wall {
+  translation 0.83396 -0.835691 2.95655e-06
+  rotation 2.3463999999870816e-06 2.3463999999870816e-06 0.9999999999944944 1.5708
+  name "wall(63)"
+  size 0.25 0.01 0.1
+}
+Wall {
+  translation 1.08575 -0.834511 2.95655e-06
+  rotation 2.3463999999870816e-06 2.3463999999870816e-06 0.9999999999944944 1.5708
+  name "wall(64)"
+  size 0.25 0.01 0.1
+}
+Wall {
+  translation 0.330347 0.163715 2.95655e-06
+  rotation 2.3463999999870816e-06 2.3463999999870816e-06 0.9999999999944944 1.5708
+  name "wall(66)"
+  size 0.25 0.01 0.1
+}
+Wall {
+  translation -0.165411 0.911401 2.95655e-06
+  rotation 2.3463999999870816e-06 2.3463999999870816e-06 0.9999999999944944 1.5708
+  name "wall(67)"
+  size 0.25 0.01 0.1
+}
+Wall {
+  translation 0.589915 -1.08575 2.95655e-06
+  rotation -2.3463999999870816e-06 -2.3463999999870816e-06 -0.9999999999944944 -1.5707953071795862
+  name "wall(70)"
+  size 0.25 0.01 0.1
+}
+Wall {
+  translation -0.79216 0.778638 3.23813e-06
+  rotation 0 1 0 4.6928e-06
+  name "wall(4)"
+  size 0.25 0.01 0.1
+}
+Wall {
+  translation -0.914197 0.1608 3.23813e-06
+  rotation -2.3463999999870816e-06 -2.3463999999870816e-06 0.9999999999944944 -1.5707953071795862
+  name "wall(5)"
+  size 1.25 0.01 0.1
+}
+Wall {
+  translation -1.04337 -0.459024 3.23813e-06
+  rotation 0 1 0 4.6928e-06
+  name "wall(1)"
+  size 0.25 0.01 0.1
+}
+Wall {
+  translation -0.786883 0.28526 3.23813e-06
+  rotation 0 1 0 4.6928012867022945e-06
+  name "wall(2)"
+  size 0.25 0.01 0.1
+}
+Wall {
+  translation 1.20988 -0.713001 3.23813e-06
+  rotation 0 1 0 4.6928e-06
+  size 0.25 0.01 0.1
+}
+E-puck {
+  hidden position_0_0 681.164121811103
+  hidden position_0_1 746.5339505070638
+  hidden linearVelocity_0 9.108379724804205e-05 0.00015907444561391875 -1.1545238176514695e-05
+  hidden angularVelocity_0 -0.010532561798084343 0.0007347297821500475 -1.3236386294667228
+  hidden rotation_1 0 1 0 2.5801086357076333
+  hidden linearVelocity_1 -0.002673636726907518 -0.03421003837815353 -1.0845355727262603e-06
+  hidden angularVelocity_1 1.8676596611500138 -0.15155892026083956 -1.3340911914769922
+  hidden rotation_2 0 1 0 5.11808425987256
+  hidden linearVelocity_2 0.0028591419059433923 0.03463239924324359 -6.858854896485454e-07
+  hidden angularVelocity_2 -1.8887259893611896 0.1530027845552163 -1.3341912810676535
+  translation -0.508421430023733 -0.5424073886484265 -7.525099756480746e-05
+  rotation 1.0049862756668048e-05 -1.0869445340075095e-05 -0.9999999998904276 1.6746072773297824
+  controller "mazeRunner2"
+  camera_width 520
+  camera_height 390
+  distance_sensor_numberOfRays 4
+}
