@@ -454,6 +454,10 @@ def part2():
             stop()
             curr_index1+=1
 
+image = cam.getImageArray()
+for i in range(720):
+    a=detect_color(image[360][i])
+    
 
 while robot.step(timestep) != -1:
     
