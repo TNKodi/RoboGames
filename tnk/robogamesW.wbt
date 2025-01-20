@@ -9,13 +9,14 @@ EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/project
 WorldInfo {
 }
 Viewpoint {
-  orientation -0.46038578671198777 0.44067284347459895 0.7706181755043127 1.8705352907633026
-  position -0.12727849232095748 -3.00366291053293 7.255444746342194
+  orientation -0.4576449467354656 0.45139605745241607 0.7660304837562981 1.8474850877723656
+  position 0.6018990255141857 -1.1664812371359377 2.438259247803739
   follow "wall(5)"
 }
 TexturedBackground {
 }
 TexturedBackgroundLight {
+  castShadows FALSE
 }
 RectangleArena {
   translation 0.0845822 0.0388599 -8.88179e-15
@@ -52,7 +53,7 @@ Wall {
   }
 }
 Wall {
-  translation 1.03647 -0.197295 3.23813e-06
+  translation 1.03314 -0.199999 3.23813e-06
   rotation 9.589706626575503e-09 -0.9999916482273697 0.004086988562297277 -5.307179586466759e-06
   name "brown wall"
   size 0.1 0.01 0.1
@@ -64,10 +65,10 @@ Wall {
   }
 }
 Wall {
-  translation 0.209333 -1.20731 3.23813e-06
+  translation 0.141031 -1.20756 3.23813e-06
   rotation 9.589706626575503e-09 -0.9999916482273697 0.004086988562297277 -5.307179586466759e-06
   name "yellow wall"
-  size 0.25 0.01 0.1
+  size 0.1 0.01 0.1
   appearance Roughcast {
     colorOverride 1 1 0
     textureTransform TextureTransform {
@@ -387,12 +388,12 @@ Wall {
   size 0.25 0.01 0.1
 }
 Robot {
-  translation -1.032630485629103 -0.39257560569718875 -6.395607959608189e-05
-  rotation -0.0003799219915923892 -0.000380947689918938 0.9999998552690584 -1.5680408609041692
+  translation -0.0739129 -0.113447 -8.36287e-05
+  rotation 0.0007694879309535464 -0.0012598998869486893 0.9999989102697058 1.59641
   children [
     HingeJoint {
       jointParameters HingeJointParameters {
-        position 4797.026776033585
+        position 11916.177515520594
         axis 0 1 0
         anchor 0 0 0.02
       }
@@ -408,8 +409,8 @@ Robot {
         }
       ]
       endPoint DEF EPUCK_LEFT_WHEEL Solid {
-        translation 0 0.025999999999999402 0.02
-        rotation 0 -1 0 3.3267986516194576
+        translation 0 0.02599999999999882 0.02
+        rotation 0 0.9999999999999999 0 3.2581731080982097
         children [
           DEF EPUCK_WHEEL Pose {
             rotation 1 0 0 -1.570796
@@ -545,7 +546,7 @@ Robot {
     }
     HingeJoint {
       jointParameters HingeJointParameters {
-        position 5116.041147312173
+        position 12115.148150611409
         axis 0 1 0
         anchor 0 0 0.02
       }
@@ -561,8 +562,8 @@ Robot {
         }
       ]
       endPoint DEF EPUCK_RIGHT_WHEEL Solid {
-        translation 0 -0.025999999999999534 0.02
-        rotation 0 0.9999999999999999 0 1.52830726798966
+        translation 0 -0.025999999999998934 0.02
+        rotation 0 1 0 1.1668783691659823
         children [
           Pose {
             rotation 1 0 0 3.14159
@@ -1197,10 +1198,15 @@ Robot {
             0.14 1400 0
             0.145 1450 0
             0.15 1500 0
+            0.155 1550 0
             0.16 1600 0
             0.165 1650 0
+            0.17 1700 0
+            0.175 1700 0
             0.18 1800 0
+            0.19 1900 0
             0.2 2000 0
+            0.22 2200 0
           ]
           type "infra-red"
           aperture 0.1
@@ -1395,8 +1401,12 @@ Robot {
             0.15 1500 0
             0.155 1550 0
             0.16 1600 0
+            0.165 1650 0
+            0.17 1750 0
             0.18 1800 0
+            0.19 1900 0
             0.2 2000 0
+            0.22 2200 0
           ]
           type "infra-red"
           aperture 0.1
@@ -1632,7 +1642,7 @@ Robot {
         }
       ]
       fieldOfView 0.84
-      width 520
+      width 720
       height 720
       near 0.0055
       zoom Zoom {
