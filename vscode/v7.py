@@ -54,9 +54,9 @@ yellow_pink=[-1,-1,+1,-1,-1,+1,-1,-1,+1,+1,-1,-1,2]
 pink_brown=[-1,-1,0,-1,2]
 brown_green=[1,1,-1,1,1,1,-1,0,1,1,-1,1,2]
 
-green_red=[-1,-1,-1,-1,0,1,-1,-1,1,1,-1,-1,-1,1,-1,0,-1,2]
+green_red=[-1,-1,0,1,-1,-1,1,1,-1,-1,-1,1,-1,0,-1,2]
 pink_red=[-1,-1,2]
-brown_red=[-1,0,-1,2]
+brown_red=[0,-1,2]
 yellow_red=[+1,-1,-1,+1,-1,-1,+1,+1,-1,+1,2]
 
 color_array=["red","yellow","pink","brown","green"]
@@ -184,7 +184,7 @@ def isblock():
     left.sort()
     right.sort() 
     print(left[5],frontl[5],frontr[5],right[5])
-    if frontl[5]<1100 and frontr[5]<=1100:
+    if frontl[5]<1470 and frontr[5]<=1470:
         dir[0]= 0
     if right[5]>1980:
         dir[1]= 1
@@ -286,6 +286,57 @@ def findColour():
         colortoindex()
 
 #--------------------------------------------------------------------------------
+def pidController1(kp,  kd, ki,dir) : 
+    global temdis,count
+    if dir[2]==2:
+        e=-(dis_values[2]-temdis)
+        print("rrrrrrrr",temdis)
+        count=0
+    elif dir[1]==1:
+        e=dis_values[5]-temdis
+        print("LLLLLLLLLLLLLL",temdis)
+        count=0
+    elif dir[2]!=2 and dir[1]!=1:
+        count+=1
+        if count>5:
+            e=dis_values[5]-dis_values[2]
+            temdis=dis_values[2]
+            
+        else:e=0
+    print('diff',e)
+    global ePrevious
+    global eIntegral
+    eDerivative = (e - ePrevious)
+    eIntegral = eIntegral + e
+    u = (kp * e) + (kd * eDerivative) + (ki * eIntegral)
+    ePrevious = e
+    return u
+
+def isblock1():
+    dir=[10,10,10]
+    left=[]
+    right=[]
+    for i in range(10):
+        for ind in range(8):
+            dis_values[ind]=round(prox_sensors[ind].getValue(),2)
+           # print(ind,"-",dis_values[ind],end=' ')
+        left.append(dis_values[5])
+        right.append(dis_values[2])
+    left.sort()
+    right.sort() 
+    print(left[5],right[5])
+    if right[5]>1980:
+        dir[1]= 1
+    if left[5]>1980:
+        dir[2]= 2 
+    return dir
+
+def wallfallowPID1():
+    dir=isblock1()
+    u = pidController1(wkp, wkd, wki,dir)
+    moveMotor(u)
+
+
 def isWalldetect():
     frontl=[]
     frontr=[]
@@ -294,7 +345,7 @@ def isWalldetect():
         frontl.append(round(prox_sensors[7].getValue(),2))
     frontl.sort()
     frontr.sort()
-    if(frontl[5]<1470 and frontr[5]<1470):
+    if(frontl[5]<1570 and frontr[5]<1570):
         stop()
         return False
     return True
@@ -335,8 +386,7 @@ def part3():
             stop()
             curr_index+=1
     elif isWalldetect():
-        dir=isblock()
-        wallfallowPID()
+        wallfallowPID1()
     else:
         if(len(current_path)-1==curr_index):
             stop()
@@ -367,7 +417,7 @@ def part2():
     if(current1_path[curr_index1]==0):
         print(22222)
         print(color1_path_index,curr_index1,1111111111111111111111111)
-        if (color1_path_index==3 and curr_index1==4):
+        if (color1_path_index==3 and curr_index1==2):
             forward()
             delay1(3.4)
             stop()
@@ -377,19 +427,18 @@ def part2():
             delay1(2.4)
             stop()
             curr_index1+=1
-        if (color1_path_index==3 and curr_index1==15):
+        if (color1_path_index==3 and curr_index1==13):
             forward()
             delay1(3.14)
             stop()
             curr_index1+=1
-        if (color1_path_index==2 and curr_index1==1):
+        if (color1_path_index==2 and curr_index1==0):
             forward()
-            delay1(3.14)
+            delay1(3.4)
             stop()
             curr_index1+=1
     elif isWalldetect():
-        dir=isblock()
-        wallfallowPID()
+        wallfallowPID1()
     else:
         if(len(current1_path)-1==curr_index1):
             stop()
