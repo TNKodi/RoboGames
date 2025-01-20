@@ -114,7 +114,7 @@ def moveMotor(error):
     left_motor.setVelocity(0.8*max_speed-speed)
     right_motor.setVelocity(0.8*max_speed+speed)
 
-def pidController(kp,  kd, ki,dir) : 
+def pidController1(kp,  kd, ki,dir) : 
     global temdis,count
     if dir[2]==2:
         e=-(dis_values[2]-temdis)
@@ -140,7 +140,7 @@ def pidController(kp,  kd, ki,dir) :
     ePrevious = e
     return u
 
-def isblock():
+def isblock1():
     dir=[10,10,10]
     left=[]
     right=[]
@@ -159,9 +159,9 @@ def isblock():
         dir[2]= 2 
     return dir
 
-def wallfallowPID():
-    dir=isblock()
-    u = pidController(wkp, wkd, wki,dir)
+def wallfallowPID1():
+    dir=isblock1()
+    u = pidController1(wkp, wkd, wki,dir)
     moveMotor(u)
 
 
@@ -236,7 +236,7 @@ def part3():
             stop()
             curr_index+=1
     elif isWalldetect():
-        wallfallowPID()
+        wallfallowPID1()
     else:
         if(len(current_path)-1==curr_index):
             stop()
@@ -254,7 +254,7 @@ def part3():
             stop()
             curr_index+=1
 
-color_number=3
+color_number=0
 def colortoindex():
     global red_curr_index
     global red_curr_path
@@ -305,7 +305,7 @@ def part2():
             stop()
             curr_index1+=1
     elif isWalldetect():
-        wallfallowPID()
+        wallfallowPID1()
     else:
         if(len(current1_path)-1==curr_index1):
             stop()
