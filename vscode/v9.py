@@ -86,9 +86,9 @@ def cellbreak():
     if(init==False):init=right_ps.getValue()
     else:
         pulses = (ps_values[1]-init)/ (2 * math.pi)
-        print(pulses)
+        #print(pulses)
         if (pulses>=step):
-            print('===============cellbreak===============',round(step//cellsize))
+            #print('===============cellbreak===============',round(step//cellsize))
             step+=cellsize
 def detect_color(rgb_values):
     r, g, b = rgb_values
@@ -121,7 +121,7 @@ def getColour():
         else :return 0           
 def moveMotor(error):
     speed =abs(error)
-    print("error ",error)
+    #print("error ",error)
     # if (speed+0.7*max_speed > max_speed):
         # speed = 0.26*max_speed*error/speed
     # else:speed=error
@@ -137,11 +137,11 @@ def pidController(kp,  kd, ki) :
     global temdis,count
     if dir[2]==2:
         e=-(dis_values[2]-temdis)
-        print("rrrrrrrr",temdis)
+        #print("rrrrrrrr",temdis)
         count=0
     elif dir[1]==1:
         e=dis_values[5]-temdis
-        print("LLLLLLLLLLLLLL",temdis)
+        #print("LLLLLLLLLLLLLL",temdis)
         count=0
     elif dir[2]!=2 and dir[1]!=1:
         count+=1
@@ -150,7 +150,7 @@ def pidController(kp,  kd, ki) :
             temdis=dis_values[2]
             
         else:e=0
-    print('diff',e)
+    #print('diff',e)
     global ePrevious
     global eIntegral
     eDerivative = (e - ePrevious)
@@ -184,7 +184,7 @@ def isblock():
     frontr.sort()
     left.sort()
     right.sort() 
-    print(left[5],frontl[5],frontr[5],right[5])
+    #print(left[5],frontl[5],frontr[5],right[5])
     if frontl[5]<1470 and frontr[5]<=1470:
         dir[0]= 0
     if right[5]>1980:
@@ -202,7 +202,7 @@ def delay(seconds):
         if temcolour!=0 and not(temcolour is None):
             detectcolour=temcolour    
         robot.step(timestep)
-        print('detect ',detectcolour)
+        #print('detect ',detectcolour)
         
 
 def delayPID(seconds):
@@ -210,7 +210,7 @@ def delayPID(seconds):
     for _ in range(steps):
         wallfallowPID()
         dir=isblock()
-        print("DDDDDDDDDDDDDDDDDDDD")
+        #print("DDDDDDDDDDDDDDDDDDDD")
         robot.step(timestep)
 
 def turn(dir):
@@ -254,8 +254,8 @@ def findColour():
     #image = cam.getImageArray()
     dir=isblock()
     wallfallowPID()
-    print(dir)  
-    print('detect ',detectcolour)
+    #print(dir)  
+    #print('detect ',detectcolour)
     if dir[0]==0:
         if dir[1]==1:
             init=False
@@ -294,6 +294,8 @@ def findColour():
         stop()
         delay(2)
         robo_state=2
+        print("robo_state",robo_state)
+        
         colortoindex()
 
 #--------------------------------------------------------------------------------
@@ -301,11 +303,11 @@ def pidController1(kp,  kd, ki,dir) :
     global temdis,count
     if dir[2]==2:
         e=-(dis_values[2]-temdis)
-        print("rrrrrrrr",temdis)
+        #print("rrrrrrrr",temdis)
         count=0
     elif dir[1]==1:
         e=dis_values[5]-temdis
-        print("LLLLLLLLLLLLLL",temdis)
+        #print("LLLLLLLLLLLLLL",temdis)
         count=0
     elif dir[2]!=2 and dir[1]!=1:
         count+=1
@@ -314,7 +316,7 @@ def pidController1(kp,  kd, ki,dir) :
             temdis=dis_values[2]
             
         else:e=0
-    print('diff',e,temdis)
+    #print('diff',e,temdis)
     global ePrevious
     global eIntegral
     eDerivative = (e - ePrevious)
@@ -335,7 +337,7 @@ def isblock1():
         right.append(dis_values[2])
     left.sort()
     right.sort() 
-    print(left[5],right[5])
+    #print(left[5],right[5])
     if right[5]>1980:
         dir[1]= 1
     if left[5]>1980:
@@ -366,14 +368,13 @@ def delay1(seconds):
     for _ in range(steps):
         robot.step(timestep)
 
-def part3():
+def cr_path():
     global curr_index
     global current_path
     global color_path_index
-    print(curr_index,color_path_index)
+    global detectcolour
+    #print(curr_index,color_path_index)
     if(current_path[curr_index]==0):
-        print(22222)
-        print(color_path_index,curr_index,1111111111111111111111111)
         if (color_path_index==2 and curr_index==2):
             forward()
             delay1(3.4)
@@ -389,7 +390,6 @@ def part3():
             delay1(2.8)
             stop()
             delay1(2)
-            print(222222222222222222222222222222222222222222222222222222)
             turn(1)
             stop()
             forward()
@@ -402,7 +402,6 @@ def part3():
         if(len(current_path)-1==curr_index):
             stop()
             delay1(2)
-            print("pathchanged",11111111111111111111111111111111111111111111111)
             color_path_index+=1
             current_path=color_path_array[color_path_index]
             curr_index=0
@@ -418,16 +417,15 @@ def part3():
 
 
 
-def part2():
+def x_red():
     global curr_index1
     global red_curr_path
     global red_curr_index
     global robo_state
+    global detectcolour
     current1_path=red_curr_path
     color1_path_index=red_curr_index
     if(current1_path[curr_index1]==0):
-        print(22222)
-        print(color1_path_index,curr_index1,1111111111111111111111111)
         if (color1_path_index==3 and curr_index1==2):
             forward()
             delay1(3.4)
@@ -457,8 +455,10 @@ def part2():
         if(len(current1_path)-1==curr_index1):
             stop()
             delay1(2)
+            print("cometo",color_array[detectcolour-1])
             curr_index1==0
             robo_state=3
+            print("robo_state",robo_state)
         elif (current1_path[curr_index1]==1):
             turn(2)
             stop()
@@ -478,11 +478,11 @@ while robot.step(timestep) != -1:
     #image = cam.getImageArray()
     
     if robo_state==3:
-        print(111)
-        part3()
+        #print(111)
+        cr_path()
     elif robo_state==2:
-        print(1010101001001)
-        part2()
+        #print(1010101001001)
+        x_red()
     elif robo_state==1:
         dir=isblock()
         findColour()
